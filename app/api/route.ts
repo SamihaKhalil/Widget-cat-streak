@@ -24,11 +24,11 @@ function renderWidget(currentStreak: number, petAsset: string) {
       <title id="title">GitHub contribution streak for ${USERNAME}</title>
       <desc id="description">Current streak: ${currentStreak} days</desc>
       <image href="${petAsset}" x="30" y="90" width="250" height="250" />
-      <image href="${ASSETS.fish}" x="-80" y="5" width="400" height="140" />
-      <text x="180" y="79" fill="white" text-anchor="middle" font-size="14" font-weight="bold" font-family="Arial, sans-serif">Contribution Streak</text>
-      <text x="180" y="108" fill="white" text-anchor="middle" font-family="Arial, sans-serif">
-        <tspan font-size="27" font-weight="bold">${currentStreak}</tspan>
-        <tspan font-size="14" font-weight="bold"> Days</tspan>
+      <image href="${ASSETS.fish}" x="0" y="0" width="300" height="207" />
+      <text x="110" y="82" fill="white" text-anchor="middle" font-size="12" font-weight="bold" font-family="Arial, sans-serif">Contribution Streak</text>
+      <text x="110" y="110" fill="white" text-anchor="middle" font-family="Arial, sans-serif">
+        <tspan font-size="25" font-weight="bold">${currentStreak}</tspan>
+        <tspan font-size="12" font-weight="bold"> Days</tspan>
       </text>
     </svg>
   `.trim();
