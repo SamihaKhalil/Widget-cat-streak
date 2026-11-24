@@ -23,7 +23,6 @@ function renderWidget(currentStreak: number, petAsset: string) {
     <svg width="330" height="330" viewBox="0 0 330 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
       <title id="title">GitHub contribution streak for ${USERNAME}</title>
       <desc id="description">Current streak: ${currentStreak} days</desc>
-      <rect width="100%" height="100%" rx="16" fill="#050505" />
       <image href="${petAsset}" x="30" y="90" width="250" height="250" />
       <image href="${ASSETS.fish}" x="33" y="20" width="250" height="110" />
       <text x="70" y="70" fill="white" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Contribution Streak</text>
