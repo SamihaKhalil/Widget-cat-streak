@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GitHub README Widget
 
-## Getting Started
+Widget SVG para mostrar la racha actual de contribuciones de
+[`SamihaKhalil`](https://github.com/SamihaKhalil) con una mascota que cambia de
+estado según la racha.
 
-First, run the development server:
+## Desarrollo local
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Requisitos: Node.js 20 o posterior y un token personal de GitHub con acceso de
+lectura a la información pública del perfil.
+
+1. Ejecuta `npm install`.
+2. Crea un archivo `.env.local` que no se debe subir al repositorio:
+
+   ```env
+   GITHUB_TOKEN=tu_token_de_github
+   ```
+
+3. Ejecuta `npm run dev`.
+4. Abre `http://localhost:3000/api` para ver el SVG.
+
+## Despliegue en Vercel
+
+1. Sube este proyecto a un repositorio de GitHub.
+2. Importa el repositorio en Vercel.
+3. En **Settings > Environment Variables**, agrega `GITHUB_TOKEN` para
+   Production, Preview y Development.
+4. Despliega y comprueba `https://tu-proyecto.vercel.app/api`.
+
+No agregues el token al código ni al README. Los archivos `.env*` están
+ignorados por Git.
+
+## Agregarlo al perfil de GitHub
+
+En el repositorio de perfil `SamihaKhalil/SamihaKhalil`, agrega al `README.md`:
+
+```md
+![GitHub contribution streak](https://tu-proyecto.vercel.app/api)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sustituye `tu-proyecto` por el dominio asignado por Vercel.
